@@ -1,0 +1,40 @@
+cmake_package "simulation/gazebo" do |pkg|
+    pkg.depends_on 'tools/ignition-math2'
+
+    pkg.depends_on "boost"
+    pkg.depends_on "libxml2"
+    pkg.depends_on "libbullet"
+    pkg.depends_on "libtinyxml2"
+    pkg.depends_on "qt4"
+
+    pkg.depends_on "libprotoc"
+    pkg.depends_on "libprotobuf"
+    pkg.depends_on "protobuf-compiler"
+    pkg.depends_on "libtar"
+    pkg.depends_on "libcurl-ssl"
+    pkg.depends_on "libcegui-mk2"
+    pkg.depends_on "libopenal"
+    pkg.depends_on "libtbb"
+    pkg.depends_on "libswscale"
+    pkg.depends_on "libavformat"
+    pkg.depends_on "libavcodec"
+    pkg.depends_on "libogre"
+    pkg.depends_on "libgts"
+    pkg.depends_on "libltdl"
+    pkg.depends_on "libfreeimage"
+    pkg.depends_on "freeglut3"
+    pkg.depends_on "control/sdformat"
+
+    pkg.define 'FORCE_GRAPHIC_TESTS_COMPILATION', 'TRUE'
+end
+
+
+cmake_package "simulation/gazebo_underwater"
+cmake_package "simulation/gazebo_thruster"
+orogen_package "simulation/orogen/rock_gazebo"
+cmake_package "simulation/rock_gazebo" do |pkg|
+    if Autoproj.manifest.excluded?('simulation/gazebo')
+        pkg.define 'BUILD_GAZEBO_PLUGIN', 'OFF'
+    end
+end
+

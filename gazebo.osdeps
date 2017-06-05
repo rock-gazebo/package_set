@@ -1,0 +1,92 @@
+simulation/gazebo:
+    ubuntu:
+        '14.04,14.10,15.04,15.10': nonexistent
+        default: [gazebo7, gazebo7-plugin-base, libgazebo7-dev]
+
+libtinyxml:
+    debian,ubuntu:
+        - libtinyxml-dev
+
+libtinyxml2:
+    debian,ubuntu:
+        - libtinyxml2-dev
+
+libprotoc:
+    debian,ubuntu:
+        - libprotoc-dev
+
+libprotobuf:
+    debian,ubuntu:
+        - libprotobuf-dev
+
+protobuf-compiler:
+    debian,ubuntu:
+        - protobuf-compiler
+
+libtar:
+    debian,ubuntu:
+        - libtar-dev
+
+libcurl-ssl:
+    debian:
+        - libcurl-ssl-dev
+    ubuntu:
+        - libcurl4-openssl-dev
+
+libcegui-mk2:
+    debian,ubuntu:
+        - libcegui-mk2-dev
+
+libopenal:
+    debian,ubuntu:
+        - libopenal-dev
+
+libtbb:
+    debian,ubuntu:
+        - libtbb-dev
+
+libswscale:
+    debian,ubuntu:
+        - libswscale-dev
+
+libavformat:
+    debian,ubuntu:
+        - libavformat-dev
+
+libavcodec:
+    debian,ubuntu:
+        - libavcodec-dev
+
+libogre:
+    ubuntu:
+        '14.04,14.10,15.04,15.10': libogre-1.8-dev
+        '16.04': libogre-1.9-dev
+    debian:
+        - libogre-dev
+
+libgts:
+    debian,ubuntu:
+        - libgts-dev
+
+libltdl:
+    debian,ubuntu:
+        - libltdl-dev
+
+libplayerc++:
+    debian:
+        - libplayerc++3.0-dev
+    ubuntu:
+        '14.04,14.10,15.04,15.10': libplayerc++3.0-dev
+        '16.04': nonexistent
+
+libfreeimage:
+    debian,ubuntu:
+        - libfreeimage-dev
+
+libbullet:
+    debian,ubuntu:
+        - libbullet-dev
+
+libfftw3:
+    debian,ubuntu:
+        - libfftw3-dev

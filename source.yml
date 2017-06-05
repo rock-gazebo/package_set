@@ -1,1 +1,39 @@
 name: rock.gazebo
+
+overrides:
+    - simulation/.*:
+        github: Brazilian-Institute-of-Robotics/simulation-$PACKAGE_BASENAME
+
+    - simulation/orogen/.*:
+        github: Brazilian-Institute-of-Robotics/simulation-orogen-$PACKAGE_BASENAME
+
+    # For SDF support
+    - drivers/transformer:
+        github: Brazilian-Institute-of-Robotics/drivers-transformer
+        branch: master
+
+    # For SDF support in rock-transformer
+    - gui/vizkit:
+        github: Brazilian-Institute-of-Robotics/gui-vizkit
+        branch: master
+
+    # Default manipulator
+    - gui/vizkit3d:
+        github: Brazilian-Institute-of-Robotics/gui-vizkit3d
+        branch: master
+
+    # SDF support
+    - control/kdl_parser:
+        github: Brazilian-Institute-of-Robotics/control-kdl_parser
+        branch: master
+
+    # SDF support
+    - gui/control_ui:
+        github: Brazilian-Institute-of-Robotics/gui-control_ui
+        branch: master
+
+    # SDF support
+    - gui/robot_model:
+        github: Brazilian-Institute-of-Robotics/gui-robot_model
+        branch: master
+
