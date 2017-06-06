@@ -1,7 +1,15 @@
-simulation/gazebo:
+gazebo7:
     ubuntu:
         '14.04,14.10,15.04,15.10': nonexistent
         default: [gazebo7, gazebo7-plugin-base, libgazebo7-dev]
+
+gazebo8:
+    ubuntu:
+        '14.04,14.10,15.04,15.10': nonexistent
+        default: [gazebo8, gazebo8-plugin-base, libgazebo8-dev]
+
+simulation/gazebo:
+    osdep: gazebo8
 
 libtinyxml:
     debian,ubuntu:

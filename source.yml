@@ -1,39 +1,44 @@
 name: rock.gazebo
 
-overrides:
+version_control:
+    - gui/.*:
+        github: rock-gazebo/gui-$PACKAGE_BASENAME
+
     - simulation/.*:
-        github: Brazilian-Institute-of-Robotics/simulation-$PACKAGE_BASENAME
+        github: rock-gazebo/simulation-$PACKAGE_BASENAME
 
     - simulation/orogen/.*:
-        github: Brazilian-Institute-of-Robotics/simulation-orogen-$PACKAGE_BASENAME
+        github: rock-gazebo/simulation-orogen-$PACKAGE_BASENAME
+
+    - simulation/gazebo:
+        type: archive 
+        url: https://bitbucket.org/osrf/gazebo/get/gazebo8_8.1.1.tar.bz2
+        update_cached_file: false
+    
+overrides:
+    - simulation/.*:
+        github: rock-gazebo/simulation-$PACKAGE_BASENAME
+
+    - simulation/orogen/.*:
+        github: rock-gazebo/simulation-orogen-$PACKAGE_BASENAME
 
     # For SDF support
     - drivers/transformer:
-        github: Brazilian-Institute-of-Robotics/drivers-transformer
+        github: rock-gazebo/drivers-transformer
         branch: master
 
     # For SDF support in rock-transformer
     - gui/vizkit:
-        github: Brazilian-Institute-of-Robotics/gui-vizkit
-        branch: master
-
-    # Default manipulator
-    - gui/vizkit3d:
-        github: Brazilian-Institute-of-Robotics/gui-vizkit3d
-        branch: master
-
-    # SDF support
-    - control/kdl_parser:
-        github: Brazilian-Institute-of-Robotics/control-kdl_parser
+        github: rock-gazebo/gui-vizkit
         branch: master
 
     # SDF support
     - gui/control_ui:
-        github: Brazilian-Institute-of-Robotics/gui-control_ui
+        github: rock-gazebo/gui-control_ui
         branch: master
 
     # SDF support
     - gui/robot_model:
-        github: Brazilian-Institute-of-Robotics/gui-robot_model
+        github: rock-gazebo/gui-robot_model
         branch: master
 
