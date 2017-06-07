@@ -1,3 +1,5 @@
+cmake_package 'drivers/gps_base'
+orogen_package 'drivers/orogen/gps_base'
 cmake_package "simulation/gazebo" do |pkg|
     pkg.depends_on 'tools/ignition-math2'
 

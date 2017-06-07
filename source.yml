@@ -4,6 +4,12 @@ version_control:
     - gui/.*:
         github: rock-gazebo/gui-$PACKAGE_BASENAME
 
+    - drivers/.*:
+        github: rock-drivers/drivers-$PACKAGE_BASENAME
+
+    - drivers/orogen/.*:
+        github: rock-drivers/drivers-orogen-$PACKAGE_BASENAME
+
     - simulation/.*:
         github: rock-gazebo/simulation-$PACKAGE_BASENAME
 
