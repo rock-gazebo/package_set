@@ -36,6 +36,11 @@ overrides:
         github: rock-gazebo/drivers-transformer
         branch: master
 
+    # Misc patches
+    - drivers/orogen/transformer:
+        github: rock-gazebo/drivers-orogen-transformer
+        branch: master
+
     # For SDF support in rock-transformer
     - gui/vizkit:
         github: rock-gazebo/gui-vizkit
