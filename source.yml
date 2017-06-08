@@ -4,6 +4,9 @@ version_control:
     - gui/.*:
         github: rock-gazebo/gui-$PACKAGE_BASENAME
 
+    - bundles/common_models:
+        github: rock-gazebo/bundles-common_models
+
     - drivers/.*:
         github: rock-drivers/drivers-$PACKAGE_BASENAME
 
