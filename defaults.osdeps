@@ -1,0 +1,6 @@
+simulation/gazebo:
+    osdep: gazebo8
+
+control/sdformat:
+    osdep: sdformat5
+

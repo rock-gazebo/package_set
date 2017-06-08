@@ -8,8 +8,15 @@ gazebo8:
         '14.04,14.10,15.04,15.10': nonexistent
         default: [gazebo8, gazebo8-plugin-base, libgazebo8-dev]
 
-simulation/gazebo:
-    osdep: gazebo8
+sdformat4:
+    ubuntu:
+        '14.04,14.10,15.04,15.10': nonexistent
+        default: [libsdformat4, libsdformat4-dev]
+
+sdformat5:
+    ubuntu:
+        '14.04,14.10,15.04,15.10': nonexistent
+        default: [libsdformat5, libsdformat5-dev]
 
 libtinyxml:
     debian,ubuntu:
