@@ -47,3 +47,4 @@ remove_from_default 'simulation/gazebo_underwater',
     'drivers/gps_base',
     'drivers/orogen/gps_base'
 
+Autoproj.manifest.exclude_package 'qwt5', "rock.gazebo and qwt5 are incompatible"
