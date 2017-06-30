@@ -56,3 +56,7 @@ overrides:
         github: rock-gazebo/gui-robot_model
         branch: master
 
+    # Make QWT5-qt4 optional within rock_widget_collection
+    - gui/rock_widget_collection:
+        branch: make_qwt5_optional
+
