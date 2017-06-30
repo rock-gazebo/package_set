@@ -1,17 +1,10 @@
 cmake_package 'gui/vizkit3d_world'
 orogen_package 'gui/orogen/vizkit3d_world'
-orogen_package 'simulation/orogen/underwater_camera_simulation'
-
-cmake_package 'gui/vizkit3d_normal_depth_map'
-cmake_package 'simulation/gpu_sonar_simulation'
-orogen_package 'simulation/orogen/imaging_sonar_simulation'
+cmake_package 'gui/vizkit3d_ocean'
+cmake_package 'gui/osg_ocean'
 
 cmake_package 'gui/vizkit3d_laser_line'
 
 remove_from_default 'gui/vizkit3d_world',
     'gui/orogen/vizkit3d_world',
-    'simulation/orogen/underwater_camera_simulation',
-    'gui/vizkit3d_normal_depth_map',
-    'simulation/gpu_sonar_simulation',
-    'simulation/orogen/imaging_sonar_simulation',
     'gui/vizkit3d_laser_line'
