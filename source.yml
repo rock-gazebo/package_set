@@ -4,6 +4,9 @@ version_control:
     - gui/.*:
         github: rock-gazebo/gui-$PACKAGE_BASENAME
 
+    - gui/orogen/.*:
+        github: rock-gazebo/gui-orogen-$PACKAGE_BASENAME
+
     - bundles/common_models:
         github: rock-gazebo/bundles-common_models
 
@@ -44,6 +47,11 @@ overrides:
     # For SDF support in rock-transformer
     - gui/vizkit:
         github: rock-gazebo/gui-vizkit
+        branch: master
+
+    # Constructor change for vizkit3d_world
+    - gui/vizkit3d:
+        github: rock-gazebo/gui-vizkit3d
         branch: master
 
     # SDF support

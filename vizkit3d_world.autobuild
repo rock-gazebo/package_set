@@ -1,7 +1,18 @@
 cmake_package 'gui/vizkit3d_world'
 orogen_package 'gui/orogen/vizkit3d_world'
-cmake_package 'gui/vizkit3d_ocean'
-cmake_package 'gui/osg_ocean'
+cmake_package 'gui/osg_ocean' do |pkg|
+    pkg.depends_on 'osg'
+    pkg.depends_on 'libfftw3'
+    pkg.define 'USE_FFTW3', 'ON'
+    pkg.define 'USE_FFTSS', 'OFF'
+    pkg.define "ENABLE_EXAMPLE", "OFF"
+    pkg.define 'CMAKE_BUILD_TYPE', 'Release'
+    Autoproj.env_add_path 'OSG_FILE_PATH', File.join(pkg.prefix, 'share')
+end
+
+cmake_package "gui/vizkit3d_ocean" do |pkg|
+    Autoproj.env_add_path 'OSG_FILE_PATH', File.join(pkg.prefix, 'share')
+end
 
 cmake_package 'gui/vizkit3d_laser_line'
 
