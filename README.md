@@ -7,8 +7,9 @@ to keep it up to date, given how quickly gazebo itself evolves. The recommended
 method of installation is to use OSRF's APT packages listed [on the Gazebo
 website](http://gazebosim.org).
 
-The package set selects a default Gazebo version (as simulation/gazebo), you can
-override it in your own build configuration by adding an
+The package set currently selects **Gazebo 8**, which requires the APT source above.
+
+You can override this choice in your own build configuration by adding an
 `autoproj/overrides.d/gazebo-default.osdeps` file. You will need to pick the
 corresponding sdformat version at the same time, e.g.
 
