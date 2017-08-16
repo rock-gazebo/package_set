@@ -8,7 +8,7 @@ version_control:
         github: rock-gazebo/gui-orogen-$PACKAGE_BASENAME
 
     - bundles/common_models:
-        github: rock-gazebo/bundles-common_models
+        github: rock-core/bundles-common_models
 
     - drivers/.*:
         github: rock-drivers/drivers-$PACKAGE_BASENAME
