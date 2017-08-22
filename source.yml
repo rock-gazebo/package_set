@@ -66,5 +66,5 @@ overrides:
 
     # Make QWT5-qt4 optional within rock_widget_collection
     - gui/rock_widget_collection:
-        branch: make_qwt5_optional
+        branch: master
 
