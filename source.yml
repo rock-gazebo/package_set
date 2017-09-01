@@ -26,6 +26,9 @@ version_control:
         type: archive 
         url: https://bitbucket.org/osrf/gazebo/get/gazebo8_8.1.1.tar.bz2
         update_cached_file: false
+
+    - simulation/rock_gazebo:
+        branch: recursive_sdf_models
     
 overrides:
     # Syskit 2 / Roby 3
@@ -58,16 +61,11 @@ overrides:
         github: rock-gazebo/gui-robot_model
     - drivers/transformer:
         github: rock-gazebo/drivers-transformer
-    - control/robot_frames:
-        branch: fix_compilation_warnings
+        branch: recursive_sdf_models
     - control/orogen/robot_frames:
         github: rock-gazebo/control-orogen-robot_frames
     - control/orogen/cart_ctrl_wdls:
         github: rock-gazebo/control-orogen-cart_ctrl_wdls
-    - simulation/rock_gazebo:
-        branch: recursive_sdf_models
-    - drivers/transformer:
-        branch: recursive_sdf_models
     - control/ruby_sdformat:
         branch: recursive_sdf_models
 
