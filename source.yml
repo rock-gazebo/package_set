@@ -28,43 +28,46 @@ version_control:
         update_cached_file: false
     
 overrides:
+    # Syskit 2 / Roby 3
+    - tools/metaruby:
+        branch: syskit2-test-refactoring
+    - tools/roby:
+        branch: ide_improvements
+    - tools/syskit:
+        branch: ide_improvements
+
     - simulation/.*:
         github: rock-gazebo/simulation-$PACKAGE_BASENAME
-
     - simulation/orogen/.*:
         github: rock-gazebo/simulation-orogen-$PACKAGE_BASENAME
-
-    # For SDF support
-    - drivers/transformer:
-        github: rock-gazebo/drivers-transformer
-        branch: master
 
     # Misc patches
     - drivers/orogen/transformer:
         github: rock-gazebo/drivers-orogen-transformer
-        branch: master
-
     # For SDF support in rock-transformer
     - gui/vizkit:
         github: rock-gazebo/gui-vizkit
-        branch: master
-
     # Constructor change for vizkit3d_world
     - gui/vizkit3d:
         github: rock-gazebo/gui-vizkit3d
         branch: master
-
     # SDF support
     - gui/control_ui:
         github: rock-gazebo/gui-control_ui
-        branch: master
-
-    # SDF support
     - gui/robot_model:
         github: rock-gazebo/gui-robot_model
-        branch: master
-
-    # Make QWT5-qt4 optional within rock_widget_collection
-    - gui/rock_widget_collection:
-        branch: master
+    - drivers/transformer:
+        github: rock-gazebo/drivers-transformer
+    - control/robot_frames:
+        branch: fix_compilation_warnings
+    - control/orogen/robot_frames:
+        github: rock-gazebo/control-orogen-robot_frames
+    - control/orogen/cart_ctrl_wdls:
+        github: rock-gazebo/control-orogen-cart_ctrl_wdls
+    - simulation/rock_gazebo:
+        branch: recursive_sdf_models
+    - drivers/transformer:
+        branch: recursive_sdf_models
+    - control/ruby_sdformat:
+        branch: recursive_sdf_models
 
