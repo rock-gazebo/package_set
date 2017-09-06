@@ -68,4 +68,6 @@ overrides:
         github: rock-gazebo/control-orogen-cart_ctrl_wdls
     - control/ruby_sdformat:
         branch: recursive_sdf_models
+    - control/kdl_parser:
+        branch: fix_canonical_link
 
