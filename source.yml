@@ -9,6 +9,7 @@ version_control:
 
     - bundles/common_models:
         github: rock-core/bundles-common_models
+        branch: recursive_sdf_models
 
     - drivers/.*:
         github: rock-drivers/drivers-$PACKAGE_BASENAME
@@ -29,6 +30,9 @@ version_control:
 
     - simulation/rock_gazebo:
         branch: recursive_sdf_models
+
+    - simulation/orogen/rock_gazebo:
+        branch: joint_export
     
 overrides:
     # Syskit 2 / Roby 3
