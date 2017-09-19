@@ -54,9 +54,6 @@ overrides:
     - gui/vizkit3d:
         github: rock-gazebo/gui-vizkit3d
         branch: master
-    # SDF support
-    - gui/control_ui:
-        github: rock-gazebo/gui-control_ui
     - gui/robot_model:
         github: rock-gazebo/gui-robot_model
     - drivers/transformer:
@@ -68,6 +65,4 @@ overrides:
         github: rock-gazebo/control-orogen-cart_ctrl_wdls
     - control/ruby_sdformat:
         branch: recursive_sdf_models
-    - control/kdl_parser:
-        branch: fix_canonical_link
 
