@@ -33,11 +33,11 @@ version_control:
 overrides:
     # Syskit 2 / Roby 3
     - tools/metaruby:
-        branch: syskit2-test-refactoring
+        branch: syskit2
     - tools/roby:
-        branch: ide_improvements
+        branch: roby3
     - tools/syskit:
-        branch: ide_improvements
+        branch: syskit2
 
     - simulation/.*:
         github: rock-gazebo/simulation-$PACKAGE_BASENAME
