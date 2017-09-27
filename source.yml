@@ -48,6 +48,10 @@ overrides:
     - simulation/orogen/.*:
         github: rock-gazebo/simulation-orogen-$PACKAGE_BASENAME
 
+    # Deploying tasks into SDF
+    - orogen:
+        branch: expose_library_path_resolution_code_into_loaders
+
     # Misc patches
     - drivers/orogen/transformer:
         github: rock-gazebo/drivers-orogen-transformer
