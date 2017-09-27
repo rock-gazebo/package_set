@@ -105,3 +105,6 @@ libbullet:
 libfftw3:
     debian,ubuntu:
         - libfftw3-dev
+
+ruby-minitar:
+    gem: minitar
