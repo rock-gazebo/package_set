@@ -108,3 +108,6 @@ libfftw3:
 
 ruby-minitar:
     gem: minitar
+
+ruby-listen:
+    gem: listen
