@@ -9,7 +9,6 @@ version_control:
 
     - bundles/common_models:
         github: rock-core/bundles-common_models
-        branch: recursive_sdf_models
 
     - drivers/.*:
         github: rock-drivers/drivers-$PACKAGE_BASENAME
@@ -28,12 +27,6 @@ version_control:
         url: https://bitbucket.org/osrf/gazebo/get/gazebo8_8.1.1.tar.bz2
         update_cached_file: false
 
-    - simulation/rock_gazebo:
-        branch: recursive_sdf_models
-
-    - simulation/orogen/rock_gazebo:
-        branch: joint_export
-    
 overrides:
     # Syskit 2 / Roby 3
     - tools/metaruby:
@@ -47,11 +40,9 @@ overrides:
         github: rock-gazebo/simulation-$PACKAGE_BASENAME
     - simulation/orogen/.*:
         github: rock-gazebo/simulation-orogen-$PACKAGE_BASENAME
-
     # Deploying tasks into SDF
     - orogen:
         branch: expose_library_path_resolution_code_into_loaders
-
     # Misc patches
     - drivers/orogen/transformer:
         github: rock-gazebo/drivers-orogen-transformer
@@ -66,11 +57,8 @@ overrides:
         github: rock-gazebo/gui-robot_model
     - drivers/transformer:
         github: rock-gazebo/drivers-transformer
-        branch: recursive_sdf_models
     - control/orogen/robot_frames:
         github: rock-gazebo/control-orogen-robot_frames
     - control/orogen/cart_ctrl_wdls:
         github: rock-gazebo/control-orogen-cart_ctrl_wdls
-    - control/ruby_sdformat:
-        branch: recursive_sdf_models
 
