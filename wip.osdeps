@@ -1,0 +1,5 @@
+# These are osdeps that are waiting to be merged in rock.core or rock
+#
+stackprof: gem
+ruby-listen:
+    gem: listen
