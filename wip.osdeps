@@ -3,3 +3,4 @@
 stackprof: gem
 ruby-listen:
     gem: listen
+rbtrace: gem
