@@ -30,11 +30,16 @@ version_control:
 overrides:
     # Syskit 2 / Roby 3
     - tools/metaruby:
-        branch: syskit2
+        #branch: syskit2
+        branch: new_model_browser
     - tools/roby:
-        branch: roby3
+        #branch: roby3
+        branch: migrate_to_new_test_harness
     - tools/syskit:
-        branch: syskit2
+        #branch: syskit2
+        branch: syskit2-new-orogen-model-syntax
+    - orogen:
+        branch: minor_loaders_changes
 
     - simulation/.*:
         github: rock-gazebo/simulation-$PACKAGE_BASENAME
