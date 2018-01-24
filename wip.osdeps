@@ -4,3 +4,12 @@ stackprof: gem
 ruby-listen:
     gem: listen
 rbtrace: gem
+aruba:
+    gem: aruba
+
+rest-client:
+    gem: rest-client
+
+ruby-backports:
+    gem: backports
+
