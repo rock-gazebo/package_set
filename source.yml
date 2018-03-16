@@ -10,6 +10,9 @@ version_control:
     - bundles/common_models:
         github: rock-core/bundles-common_models
 
+    - bundles/cucumber:
+        github: rock-core/bundles-cucumber
+
     - drivers/.*:
         github: rock-drivers/drivers-$PACKAGE_BASENAME
 
