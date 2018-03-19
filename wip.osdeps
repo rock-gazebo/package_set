@@ -1,11 +1,2 @@
 # These are osdeps that are waiting to be merged in rock.core or rock
 #
-aruba:
-    gem: aruba
-
-rest-client:
-    gem: rest-client
-
-ruby-backports:
-    gem: backports
-

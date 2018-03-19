@@ -31,14 +31,6 @@ version_control:
         update_cached_file: false
 
 overrides:
-    # Syskit 2 / Roby 3
-    - tools/metaruby:
-        branch: syskit2
-    - tools/roby:
-        branch: roby3
-    - tools/syskit:
-        branch: syskit2
-
     - simulation/.*:
         github: rock-gazebo/simulation-$PACKAGE_BASENAME
     - simulation/orogen/.*:
