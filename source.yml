@@ -45,8 +45,6 @@ overrides:
     - gui/vizkit3d:
         github: rock-gazebo/gui-vizkit3d
         branch: master
-    - gui/robot_model:
-        github: rock-gazebo/gui-robot_model
     - drivers/transformer:
         github: rock-gazebo/drivers-transformer
     - control/orogen/robot_frames:
