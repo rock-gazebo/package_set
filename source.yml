@@ -31,10 +31,6 @@ version_control:
         update_cached_file: false
 
 overrides:
-    - simulation/.*:
-        github: rock-gazebo/simulation-$PACKAGE_BASENAME
-    - simulation/orogen/.*:
-        github: rock-gazebo/simulation-orogen-$PACKAGE_BASENAME
     # Misc patches
     - drivers/orogen/transformer:
         github: rock-gazebo/drivers-orogen-transformer
