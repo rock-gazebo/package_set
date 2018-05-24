@@ -1,4 +1,3 @@
-bundle_package 'bundles/common_models'
 bundle_package 'bundles/cucumber'
 
 cmake_package "simulation/gazebo" do |pkg|
