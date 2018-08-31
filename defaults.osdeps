@@ -1,7 +1,9 @@
 simulation/gazebo:
     ubuntu:
-        '14.04,14.10,15.04,15.10': gazebo7
-        '16.04,16.10,17.04': gazebo8
+        '14.04,14.10,15.04,15.10':
+            osdep: gazebo7
+        '16.04,16.10,17.04':
+            osdep: gazebo8
         default:
             osdep: gazebo9
     default:
@@ -9,8 +11,10 @@ simulation/gazebo:
 
 control/sdformat:
     ubuntu:
-        '14.04,14.10,15.04,15.10': sdformat4
-        '16.04,16.10,17.04': sdformat5
+        '14.04,14.10,15.04,15.10':
+            osdep: sdformat4
+        '16.04,16.10,17.04':
+            osdep: sdformat5
         default:
             osdep: sdformat6
     default:
