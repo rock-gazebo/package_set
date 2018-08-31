@@ -1,6 +1,18 @@
 simulation/gazebo:
-    osdep: gazebo8
+    ubuntu:
+        '14.04,14.10,15.04,15.10': gazebo7
+        '16.04,16.10,17.04': gazebo8
+        default:
+            osdep: gazebo9
+    default:
+        osdep: gazebo9
 
 control/sdformat:
-    osdep: sdformat5
+    ubuntu:
+        '14.04,14.10,15.04,15.10': sdformat4
+        '16.04,16.10,17.04': sdformat5
+        default:
+            osdep: sdformat6
+    default:
+        osdep: sdformat6
 
