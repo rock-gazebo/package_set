@@ -40,9 +40,13 @@ end
 
 cmake_package "simulation/gazebo_underwater"
 cmake_package "simulation/gazebo_thruster"
+orogen_package 'simulation/orogen/underwater_camera_simulation'
+
 remove_from_default 'simulation/gazebo_underwater',
     'simulation/gazebo_thruster',
     'drivers/gps_base',
-    'drivers/orogen/gps_base'
+    'drivers/orogen/gps_base',
+    'simulation/orogen/underwater_camera_simulation'
+
 
 Autoproj.manifest.exclude_package 'qwt5', "rock.gazebo and qwt5 are incompatible"
