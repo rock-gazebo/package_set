@@ -1,5 +1,25 @@
 bundle_package 'bundles/cucumber'
 
+import_package "simulation/gazebo_pkgconfig_fixup" do |pkg|
+    target_dir = File.join(pkg.prefix, "lib", "pkgconfig")
+    pkg.env_add_path "PKG_CONFIG_PATH", target_dir
+    pkg.post_install do
+        gazebo = Utilrb::PkgConfig.find_all_package_files("gazebo")
+        raise "cannot find the gazebo pkg-config file" unless gazebo
+
+        FileUtils.mkdir_p target_dir
+        contents = File.readlines(gazebo.first).map do |line|
+            next(line) unless (m = /^Libs:/.match(line))
+
+            line.gsub("Boost::", "boost_")
+        end
+        File.open(File.join(target_dir, "gazebo.pc"), "w") do |io|
+            io.write contents.join
+        end
+    end
+end
+remove_from_default "simulation/gazebo_pkgconfig_fixup"
+
 cmake_package "simulation/gazebo" do |pkg|
     pkg.depends_on 'tools/ignition-math2'
 
@@ -33,13 +53,18 @@ end
 
 orogen_package "simulation/orogen/rock_gazebo"
 cmake_package "simulation/rock_gazebo" do |pkg|
+    pkg.depends_on "simulation/gazebo_pkgconfig_fixup"
     if Autoproj.manifest.excluded?('simulation/gazebo')
         pkg.define 'BUILD_GAZEBO_PLUGIN', 'OFF'
     end
 end
 
-cmake_package "simulation/gazebo_underwater"
-cmake_package "simulation/gazebo_thruster"
+cmake_package "simulation/gazebo_underwater" do |pkg|
+    pkg.depends_on "simulation/gazebo_pkgconfig_fixup"
+end
+cmake_package "simulation/gazebo_thruster" do |pkg|
+    pkg.depends_on "simulation/gazebo_pkgconfig_fixup"
+end
 orogen_package 'simulation/orogen/underwater_camera_simulation'
 
 remove_from_default 'simulation/gazebo_underwater',

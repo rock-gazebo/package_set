@@ -28,6 +28,12 @@ sdformat6:
         '14.04,14.10,15.04,15.10,16.04': nonexistent
         default: [libsdformat6, libsdformat6-dev]
 
+# Only apply the fixup on focal
+simulation/gazebo_pkgconfig_fixup:
+    ubuntu:
+        "16.04,18.04,18.10,19.04,19.10": ignore
+        default: nonexistent
+
 libtinyxml:
     debian,ubuntu:
         - libtinyxml-dev
