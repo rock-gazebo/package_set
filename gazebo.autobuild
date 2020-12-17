@@ -9,7 +9,7 @@ import_package "simulation/gazebo_pkgconfig_fixup" do |pkg|
 
         FileUtils.mkdir_p target_dir
         contents = File.readlines(gazebo.first).map do |line|
-            next(line) unless (m = /^Libs:/.match(line))
+            next(line) unless (m = /^Libs(?:\.private):/.match(line))
 
             line.gsub("Boost::", "boost_")
         end
