@@ -51,7 +51,9 @@ cmake_package "simulation/gazebo" do |pkg|
 end
 
 
-orogen_package "simulation/orogen/rock_gazebo"
+orogen_package "simulation/orogen/rock_gazebo" do |pkg|
+    pkg.optional_dependency "simulation/gazebo_pkgconfig_fixup"
+end
 cmake_package "simulation/rock_gazebo" do |pkg|
     pkg.optional_dependency "simulation/gazebo_pkgconfig_fixup"
     if Autoproj.manifest.excluded?('simulation/gazebo')
