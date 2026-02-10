@@ -22,9 +22,12 @@ remove_from_default "simulation/gazebo_pkgconfig_fixup"
 
 orogen_package "simulation/orogen/rock_gazebo"
 cmake_package "simulation/rock_gazebo" do |pkg|
-    pkg.optional_dependency "simulation/gazebo_pkgconfig_fixup"
     if Autoproj.manifest.excluded?('simulation/gazebo')
         pkg.define 'BUILD_GAZEBO_PLUGIN', 'OFF'
+    elsif Autoproj.config.get("GZ_BRANCH") == "gz-new"
+        pkg.env_add_path "GZ_SIM_SYSTEM_PLUGIN_PATH", File.join(pkg.prefix, "lib")
+    else
+        pkg.optional_dependency "simulation/gazebo_pkgconfig_fixup"
     end
 end
 
@@ -34,6 +37,7 @@ end
 cmake_package "simulation/gazebo_thruster" do |pkg|
     pkg.depends_on "simulation/gazebo_pkgconfig_fixup"
 end
+
 orogen_package 'simulation/orogen/underwater_camera_simulation'
 
 remove_from_default 'simulation/gazebo_underwater',
@@ -42,5 +46,5 @@ remove_from_default 'simulation/gazebo_underwater',
     'drivers/orogen/gps_base',
     'simulation/orogen/underwater_camera_simulation'
 
-
 Autoproj.manifest.exclude_package 'qwt5', "rock.gazebo and qwt5 are incompatible"
+

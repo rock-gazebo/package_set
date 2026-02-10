@@ -4,10 +4,10 @@ simulation/gazebo:
             osdep: gazebo7
         '16.04,16.10,17.04':
             osdep: gazebo8
-        default:
+        '18.04,20.04':
             osdep: gazebo9
-    default:
-        osdep: gazebo9
+        default:
+            osdep: gz-sim-10
 
 control/sdformat:
     ubuntu:
@@ -15,8 +15,8 @@ control/sdformat:
             osdep: sdformat4
         '16.04,16.10,17.04':
             osdep: sdformat5
-        default:
+        '18.04,20.04':
             osdep: sdformat6
-    default:
-        osdep: sdformat6
+        default:
+            osdep: sdformat16
 

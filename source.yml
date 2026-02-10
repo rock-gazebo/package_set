@@ -22,9 +22,14 @@ version_control:
     - simulation/.*:
         github: rock-gazebo/simulation-$PACKAGE_BASENAME
 
+    - simulation/rock_gazebo:
+        branch: $GZ_BRANCH
+
     - simulation/orogen/.*:
         github: rock-gazebo/simulation-orogen-$PACKAGE_BASENAME
 
+    - simulation/orogen/rock_gazebo:
+        branch: $GZ_BRANCH
 
 overrides:
     # Misc patches
