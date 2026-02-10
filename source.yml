@@ -25,10 +25,6 @@ version_control:
     - simulation/orogen/.*:
         github: rock-gazebo/simulation-orogen-$PACKAGE_BASENAME
 
-    - simulation/gazebo:
-        type: archive 
-        url: https://bitbucket.org/osrf/gazebo/get/gazebo8_8.1.1.tar.bz2
-        update_cached_file: false
 
 overrides:
     # Misc patches
