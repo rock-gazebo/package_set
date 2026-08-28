@@ -1,0 +1,8 @@
+- ubuntu:
+    - noble:
+        - type: repo
+          repo: deb http://packages.osrfoundation.org/gazebo/ubuntu-stable noble main
+        - type: key
+          keyserver: hkp://keyserver.ubuntu.com:80
+          id: D2486D2DD83DB69272AFE98867170598AF249743
+
