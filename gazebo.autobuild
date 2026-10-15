@@ -23,8 +23,10 @@ remove_from_default "simulation/gazebo_pkgconfig_fixup"
 orogen_package "simulation/orogen/rock_gazebo"
 cmake_package "simulation/rock_gazebo" do |pkg|
     if Autoproj.manifest.excluded?('simulation/gazebo')
+        pkg.env_set "ROCK_GZ", "classic"
         pkg.define 'BUILD_GAZEBO_PLUGIN', 'OFF'
     elsif Autoproj.config.get("GZ_BRANCH") == "gz-new"
+        pkg.env_set "ROCK_GZ", "new"
         pkg.env_add_path "GZ_SIM_SYSTEM_PLUGIN_PATH", File.join(pkg.prefix, "lib")
     else
         pkg.optional_dependency "simulation/gazebo_pkgconfig_fixup"
